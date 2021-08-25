@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body {
+    height: 100vh;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Comic Neue', cursive;
+    font-size: 2rem;
+    background: #222;
+    color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+#status {
+    flex: 1;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#status .illustration {
+    max-height: 300px;
+}
+
+#status button.reset {
+    font: inherit;
+    font-size: 2rem;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: 200ms;
+}
+
+#status button.reset.green {
+    border: 2px solid #4caf50
+}
+
+#status button.reset.red {
+    border: 2px solid #f44336;
+}
+
+#status button.reset.green:hover {
+    text-shadow: 0 0 4px #4caf50;
+    box-shadow: 0 0 4px #4caf50;
+}
+
+#status button.reset.red:hover {
+    text-shadow: 0 0 4px #f44336;
+    box-shadow: 0 0 4px #f44336;
+}
+
+#word {
+    margin: 1rem 0;
+    text-align: center;
+    letter-spacing: 1rem;
+    font-size: 3rem;
+    word-wrap: break-word;
+}
+
+.green {
+    color: #4caf50;
+}
+
+.red {
+    color: #f44336;
+}
+
+#keyboard {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+#keyboard button {
+    margin: 4px;
+    font: inherit;
+    background: none;
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 200ms;
+}
+
+#keyboard button:hover:not(:disabled) {
+    color: #fff;
+    text-shadow: 0 0 4px #fff;
+}
+
+#keyboard button:disabled {
+    color: #808080;
+    cursor: default;
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+        font-size: 3rem;
+    }
+    #word {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+    }
+    #keyboard {
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #word {
+        margin: 2rem .25rem;
+    }
+    #keyboard {
+        margin: .5rem;
+    }
+}
